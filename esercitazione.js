@@ -8,7 +8,7 @@ const saveButton = document.querySelector('form button')
 
 const pets = [] 
 
-// creo una classe Contact, per creare un oggetto a partire dai dati recuperati dal form
+
 class Contact {
   constructor(_petName, _ownerName, _species, _breed) {
     this.petName = _petName
@@ -25,9 +25,9 @@ const fillRowWithCards = function () {
   row.innerHTML = ''
 
   pets.forEach((contact) => {
-    const newCol = document.createElement('div') // <div></div>
-    newCol.classList.add('col') // aggiungo la classe col
-    // riempio il contenuto della col
+    const newCol = document.createElement('div')
+    newCol.classList.add('col')
+
     newCol.innerHTML = `
         <div class="card">
             <div class="card-body">
@@ -37,11 +37,11 @@ const fillRowWithCards = function () {
             </div>
         </div>
         `
-    // appendere la col alla row
+
     row.appendChild(newCol)
   })
 
-  // svuoto il form ad operazione completata
+
   nameInput.value = ''
   surnameInput.value = ''
   phoneInput.value = ''
@@ -59,8 +59,8 @@ formReference.addEventListener('submit', function (e) {
   )
 
   console.log('pet', contact)
-  // riempio la rubrica
+
   pets.push(contact)
-  // popolare la seconda row della pagina con tante card quanti sono gli elementi di contacts
+
   fillRowWithCards()
 })
