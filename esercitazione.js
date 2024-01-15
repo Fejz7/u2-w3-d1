@@ -28,6 +28,7 @@ const fillRowWithCards = function () {
     const newCol = document.createElement('div')
     newCol.classList.add('col')
 
+    
     newCol.innerHTML = `
         <div class="card">
             <div class="card-body">
